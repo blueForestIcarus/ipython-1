@@ -49,6 +49,12 @@ else:
     print("The prompts for the nested copy have been modified")
     cfg = Config()
     nested = 1
+    
+# Configuration options can be set here like in a config file.
+# For example, we can specify lines to execute when the shell app starts.
+cfg.InteractiveShellApp.exec_lines = [
+    "print('Executing lines from exec_lines.\n')"
+]
 
 # First import the embeddable shell class
 from IPython.terminal.embed import InteractiveShellEmbed
